@@ -27,6 +27,8 @@ activate :blog do |blog|
   # blog.permalink = "{year}/{month}/{day}/{title}.html"
   # Matcher for blog source files
   # blog.sources = "{year}-{month}-{day}-{title}.html"
+  blog.sources = "posts/:year-:title.html"
+
   # blog.taglink = "tags/{tag}.html"
   # blog.layout = "layout"
   # blog.summary_separator = /(READMORE)/
@@ -47,9 +49,9 @@ end
 
 page "/feed.xml", layout: false
 # Reload the browser automatically whenever files change
-# configure :development do
-#   activate :livereload
-# end
+ configure :development do
+   activate :livereload
+ end
 
 # Methods defined in the helpers block are available in templates
 # helpers do
@@ -65,4 +67,13 @@ configure :build do
 
   # Minify Javascript on build
   # activate :minify_javascript
+end
+
+activate :s3_sync do |s3_sync|
+  s3_sync.bucket                     = 'dillonvanlife' # The name of the S3 bucket you are targeting. This is globally unique.
+  s3_sync.region                     = 'us-east-1'     # The AWS region for your bucket.
+  s3_sync.aws_access_key_id          = ENV['AWS_ACCESS_KEY_ID']
+  s3_sync.aws_secret_access_key      = ENV['AWS_SECRET_ACCESS_KEY']
+  s3_sync.index_document             = 'index.html'
+  #s3_sync.error_document             = '404.html'
 end

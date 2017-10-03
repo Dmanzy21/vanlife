@@ -13,6 +13,9 @@ gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby, :x64_mingw]
 gem "middleman", "~> 4.1"
 gem "middleman-blog"
 gem 'middleman-livereload'
+gem 'middleman-s3_sync'
+gem 'mime-types'
+gem 'rake'
 
 gem 'redcarpet', '~> 3.3', '>= 3.3.3'
 
