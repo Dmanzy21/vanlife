@@ -17,6 +17,11 @@ gem 'middleman-s3_sync'
 gem 'mime-types'
 gem 'rake'
 
+#Styling
+gem 'bitters'
+gem 'bourbon'
+gem 'neat' , '1.6'
+
 gem 'redcarpet', '~> 3.3', '>= 3.3.3'
 
 # For feed.xml.builder

@@ -10,6 +10,13 @@ GEM
       public_suffix (>= 2.0.2, < 4.0)
     ansi (1.5.0)
     backports (3.8.0)
+    bitters (1.7.0)
+      bourbon (~> 5.0.0.beta.7)
+      sass (~> 3.4)
+      thor (~> 0.19)
+    bourbon (5.0.0.beta.8)
+      sass (~> 3.4)
+      thor (~> 0.19)
     builder (3.2.3)
     coffee-script (2.4.1)
       coffee-script-source
@@ -25,7 +32,10 @@ GEM
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
     erubis (2.7.0)
+    eventmachine (1.2.5)
+    eventmachine (1.2.5-java)
     eventmachine (1.2.5-x64-mingw32)
+    eventmachine (1.2.5-x86-mingw32)
     excon (0.59.0)
     execjs (2.7.0)
     fast_blank (1.0.0)
@@ -57,6 +67,7 @@ GEM
       concurrent-ruby (~> 1.0)
     hashie (3.5.6)
     http_parser.rb (0.6.0)
+    http_parser.rb (0.6.0-java)
     i18n (0.7.0)
     ipaddress (0.8.3)
     kramdown (1.15.0)
@@ -121,7 +132,15 @@ GEM
     mini_portile2 (2.3.0)
     minitest (5.10.3)
     multi_json (1.12.2)
+    neat (1.6.0)
+      bourbon (>= 3.1)
+      sass (>= 3.3)
+    nokogiri (1.8.1)
+      mini_portile2 (~> 2.3.0)
+    nokogiri (1.8.1-java)
     nokogiri (1.8.1-x64-mingw32)
+      mini_portile2 (~> 2.3.0)
+    nokogiri (1.8.1-x86-mingw32)
       mini_portile2 (~> 2.3.0)
     padrino-helpers (0.13.3.4)
       i18n (~> 0.6, >= 0.6.7)
@@ -155,7 +174,10 @@ GEM
       execjs (>= 0.3.0, < 3)
     unf (0.1.4)
       unf_ext
+    unf (0.1.4-java)
+    unf_ext (0.0.7.4)
     unf_ext (0.0.7.4-x64-mingw32)
+    unf_ext (0.0.7.4-x86-mingw32)
     wdm (0.1.1)
 
 PLATFORMS
@@ -165,12 +187,15 @@ PLATFORMS
   x86-mswin32
 
 DEPENDENCIES
+  bitters
+  bourbon
   builder (~> 3.0)
   middleman (~> 4.1)
   middleman-blog
   middleman-livereload
   middleman-s3_sync
   mime-types
+  neat (= 1.6)
   rake
   redcarpet (~> 3.3, >= 3.3.3)
   tzinfo-data

@@ -1,0 +1,83 @@
+/************ General Page Elements */
+.row-wrapper {
+  &:nth-child(odd) {
+  }
+    
+  .grid-container {
+    @include grid-container();
+    max-width: 1044px;
+    margin: 0px auto;
+  }  
+}
+
+/************ Teaser Top */
+aside {
+  @include grid-column(6, $neat-grid--page);
+  @include grid-push(0, $neat-grid--page);
+  @include grid-media($neat-grid--mobile) {
+    @include grid-column(4);
+    @include grid-push(0);
+  }
+  
+  margin-top:88px;
+  margin-bottom:79px;
+}
+
+.nav-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.logo {
+  height: 60px;
+  padding: 10px;
+}
+
+nav {
+  float: left;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline-block;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 70px;
+  padding-top: 20px;
+  vertical-align: middle;
+
+  position: relative;
+}
+
+nav li > a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+nav li > a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: $action-color;
+
+  position: absolute;
+  top: 0;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+}
+
+nav li > a:hover::before {
+  width: 100%;
+}
