@@ -12,8 +12,8 @@
 
 /************ Teaser Top */
 aside {
-  @include grid-column(6, $neat-grid--page);
-  @include grid-push(0, $neat-grid--page);
+  @include grid-column(10, $neat-grid--page);
+  @include grid-push(2, $neat-grid--page);
   @include grid-media($neat-grid--mobile) {
     @include grid-column(4);
     @include grid-push(0);
@@ -22,6 +22,8 @@ aside {
   margin-top:88px;
   margin-bottom:79px;
 }
+
+/* Navbar CSS */
 
 .nav-container {
   width: 80%;
@@ -36,25 +38,21 @@ header::after {
 
 .logo {
   height: 60px;
+  float: left;
   padding: 10px;
 }
 
-nav {
-  float: left;
-}
-
 nav ul {
+  float: left;
   margin: 0;
   padding: 0;
   list-style: none;
-  display: inline-block;
 }
 
 nav li {
   display: inline-block;
   margin-left: 70px;
   padding-top: 20px;
-  vertical-align: middle;
 
   position: relative;
 }
